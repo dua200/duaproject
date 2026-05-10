@@ -1,14 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
-    <meta charset="UTF-8">
-    <title>project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hulp voor Jou — Amsterdam</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<h1>project</h1>
-<p>
-    opnieuw gewoon een kleine test om de link te kunnen zien
-</p>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+    <div class="logo">Hulp <span>voor Jou</span></div>
+
+    <div style="position:relative">
+
+        <button class="lang-btn" id="langToggle">
+            🌍 <span id="langLabel">NL</span> ▾
+        </button>
+
+        <div class="lang-menu" id="langMenu">
+            <button onclick="setLang('nl')" class="active" id="btn-nl">
+                🇳🇱 Nederlands
+            </button>
+
+            <button onclick="setLang('en')" id="btn-en">
+                🇬🇧 English
+            </button>
+
+            <button onclick="setLang('pl')" id="btn-pl">
+                🇵🇱 Polski
+            </button>
+
+            <button onclick="setLang('ro')" id="btn-ro">
+                🇷🇴 Română
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ═══ HOMEPAGE ═══ -->
+<div id="home">
+
+    <!-- HERO -->
+    <div class="hero">
+
+        <div class="hero-badge">
+            🏙️ Amsterdam
+        </div>
+
+        <h1>
+            Waar heb je hulp bij nodig?
+        </h1>
+
+        <p>
+            Hulp vragen is veilig. Je werkgever ziet dit niet. Het is gratis.
+        </p>
+
+    </div>
+
+    <!-- TRUST -->
+    <div class="trust">
+
+        <div class="trust-pill">✅ Gratis hulp</div>
+        <div class="trust-pill">🔒 Anoniem</div>
+        <div class="trust-pill">📱 Mobielvriendelijk</div>
+        <div class="trust-pill">🌍 Meerdere talen</div>
+
+    </div>
+
+    <!-- TITEL -->
+    <div class="section-title">
+        Kies je onderwerp
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <a class="cat-card" onclick="openPage('page-geld')">
+            <span class="cat-icon">💰</span>
+            <span class="cat-label">Geld & salaris</span>
+        </a>
+
+        <a class="cat-card" onclick="openPage('page-werk')">
+            <span class="cat-icon">⚒️</span>
+            <span class="cat-label">Werk</span>
+        </a>
+
+        <a class="cat-card" onclick="openPage('page-wonen')">
+            <span class="cat-icon">🏠</span>
+            <span class="cat-label">Wonen</span>
+        </a>
+
+        <a class="cat-card" onclick="openPage('page-zorg')">
+            <span class="cat-icon">❤️</span>
+            <span class="cat-label">Zorg</span>
+        </a>
+
+        <a class="cat-card" onclick="openPage('page-digid')">
+            <span class="cat-icon">📄</span>
+            <span class="cat-label">DigiD & papieren</span>
+        </a>
+
+        <a class="cat-card" onclick="openPage('page-veilig')">
+            <span class="cat-icon">🛡️</span>
+            <span class="cat-label">Veilig hulp zoeken</span>
+        </a>
+
+        <a class="cat-card" onclick="openPage('page-contact')">
+            <span class="cat-icon">💬</span>
+            <span class="cat-label">Contact</span>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ═══ CONTACT PAGINA ═══ -->
+<div class="page" id="page-contact">
+
+    <div class="page-header">
+
+        <button class="back-btn" onclick="closePage('page-contact')">
+            ←
+        </button>
+
+        <h2>💬 Contact</h2>
+
+    </div>
+
+    <div class="page-content">
+
+        <div class="safe-box">
+            Je kunt veilig en gratis contact opnemen.
+        </div>
+
+        <div class="info-block">
+
+            <h3>Praat met iemand</h3>
+
+            <ul>
+                <li>Gratis hulp</li>
+                <li>Anoniem mogelijk</li>
+                <li>Hulp in meerdere talen</li>
+                <li>Snelle reactie via WhatsApp</li>
+            </ul>
+
+        </div>
+
+        <div class="info-block">
+
+            <h3>Contactgegevens</h3>
+
+            <ul>
+                <li>📞 +31 20 123 45 67</li>
+                <li>💬 WhatsApp beschikbaar</li>
+                <li>📍 Amsterdam</li>
+            </ul>
+
+        </div>
+
+        <div class="action-group">
+
+            <a class="action-btn whatsapp"
+               href="https://wa.me/31201234567">
+
+                💬 Open WhatsApp
+
+            </a>
+
+            <a class="action-btn phone"
+               href="tel:+31201234567">
+
+                📞 Bel direct
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="java/app.js"></script>
 
 </body>
 </html>
