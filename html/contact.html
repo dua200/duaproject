@@ -1,31 +1,57 @@
-<!-- CONTACT -->
-<div class="page" id="page-contact">
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Hulp voor Jou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
 
-  <div class="page-header">
-    <button class="back-btn" onclick="closePage('page-contact')">←</button>
-    <h2>💬 Contact</h2>
+<!-- ═══ HEADER ═══ -->
+<header>
+  <a href="../index.html" class="logo">Hulp <span>voor Jou</span> · Amsterdam</a>
+  <div style="position:relative">
+    <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
+    <div class="lang-menu" id="langMenu">
+      <button onclick="setLang('nl')" class="active" id="btn-nl">🇳🇱 Nederlands</button>
+      <button onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
+      <button onclick="setLang('pl')" id="btn-pl">🇵🇱 Polski</button>
+      <button onclick="setLang('ro')" id="btn-ro">🇷🇴 Română</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-badge" data-i18n="badge">Amsterdam</div>
+  <h1 data-i18n="hero_title">Contact</h1>
+  <p data-i18n="hero_sub">Anoniem. Gratis. In jouw taal.</p>
+</div>
+
+<!-- ═══ INHOUD ═══ -->
+<div class="page-content">
+
+  <div class="safe-box" data-i18n="safe_contact">
+    Je kunt veilig en gratis contact opnemen. Je werkgever krijgt dit niet te zien.
   </div>
 
-  <div class="page-content">
-
-    <div class="safe-box">
-      Je kunt veilig en gratis contact opnemen. Je werkgever krijgt dit niet te zien.
-    </div>
+  <div class="page-content-grid">
 
     <div class="info-block">
-      <h3>Praat met iemand</h3>
-
+      <h3 data-i18n="contact_why_title">Praat met iemand</h3>
       <ul>
-        <li>Hulp in meerdere talen</li>
-        <li>Anoniem mogelijk</li>
-        <li>Gratis hulp</li>
-        <li>Snelle reactie via WhatsApp</li>
+        <li data-i18n="c1">Hulp in meerdere talen</li>
+        <li data-i18n="c2">Anoniem mogelijk</li>
+        <li data-i18n="c3">Gratis hulp</li>
+        <li data-i18n="c4">Snelle reactie via WhatsApp</li>
       </ul>
     </div>
 
     <div class="info-block">
-      <h3>Contactgegevens</h3>
-
+      <h3 data-i18n="contact_details_title">Contactgegevens</h3>
       <ul>
         <li>📞 Telefoon: +31 20 123 45 67</li>
         <li>💬 WhatsApp: +31 20 123 45 67</li>
@@ -34,25 +60,41 @@
       </ul>
     </div>
 
-    <div class="action-group">
+    <div class="info-block">
+      <h3 data-i18n="hours_title">🕐 Bereikbaarheid</h3>
+      <ul>
+        <li><span data-i18n="hours_weekdays">Maandag t/m vrijdag</span>:&nbsp;<strong>09:00 – 17:00</strong></li>
+        <li><span data-i18n="hours_weekend">Weekend</span>:&nbsp;<strong data-i18n="hours_closed">Gesloten</strong></li>
+        <li data-i18n="hours_note">Buiten openingstijden kun je altijd een bericht sturen. We reageren de volgende werkdag.</li>
+      </ul>
+    </div>
 
-      <a class="action-btn whatsapp"
-         href="https://wa.me/31201234567">
-        💬 Open WhatsApp
-      </a>
+    <div class="info-block">
+      <h3>🌍 Talen</h3>
+      <ul>
+        <li>🇳🇱 Nederlands</li>
+        <li>🇬🇧 English</li>
+        <li>🇵🇱 Polski</li>
+        <li>🇷🇴 Română</li>
+        <li>🇧🇬 Български</li>
+        <li>🇺🇦 Українська</li>
+      </ul>
+    </div>
 
-      <a class="action-btn phone"
-         href="tel:+31201234567">
-        📞 Bel direct
-      </a>
-
-      <a class="action-btn"
-         href="mailto:hulp@amsterdam.nl">
-        ✉️ Stuur e-mail
-      </a>
-
+    <div class="action-group full-width">
+      <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="open_whatsapp_btn">Open WhatsApp</span></a>
+      <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_direct">Bel direct</span></a>
+      <a class="action-btn email"    href="mailto:hulp@amsterdam.nl">✉️ <span data-i18n="send_email">Stuur e-mail</span></a>
     </div>
 
   </div>
 
+  <a href="../index.html" class="back-home-btn" data-i18n="back_home">← Terug naar de homepage</a>
+
 </div>
+
+<footer data-i18n="footer">Gemeente Amsterdam · Gratis hulp voor arbeidsmigranten · 2026</footer>
+
+<script src="../java/contact.js"></script>
+</body>
+</html>

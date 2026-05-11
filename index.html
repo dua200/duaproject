@@ -12,7 +12,7 @@
 
 <!-- ═══ HEADER ═══ -->
 <header>
-    <div class="logo">Hulp <span>voor Jou</span></div>
+    <div class="logo">Hulp <span>voor Jou</span> · Amsterdam</div>
     <div style="position:relative">
         <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
         <div class="lang-menu" id="langMenu">
@@ -29,12 +29,12 @@
 
     <!-- HERO -->
     <div class="hero">
-        <div class="hero-badge" data-i18n="badge">🏙️ Amsterdam</div>
+        <div class="hero-badge" data-i18n="badge">Amsterdam</div>
         <h1 data-i18n="hero_title">Waar heb je hulp bij nodig?</h1>
         <p data-i18n="hero_sub">Hulp vragen is veilig. Je werkgever ziet dit niet. Het is gratis.</p>
     </div>
 
-    <!-- TRUST PILLS -->
+    <!-- TRUST BALK -->
     <div class="trust">
         <div class="trust-pill" data-i18n="trust1">✅ Gratis hulp</div>
         <div class="trust-pill" data-i18n="trust2">🔒 Anoniem</div>
@@ -42,38 +42,44 @@
         <div class="trust-pill" data-i18n="trust4">🌍 Meerdere talen</div>
     </div>
 
-    <!-- CATEGORIE KNOPPEN -->
+    <!-- CATEGORIE GRID -->
     <div class="section-title" data-i18n="choose_topic">Kies je onderwerp</div>
     <div class="grid">
         <a class="cat-card" onclick="openPage('page-geld')">
             <span class="cat-icon">💰</span>
             <span class="cat-label" data-i18n="cat_geld">Geld & salaris</span>
+            <span class="cat-desc" data-i18n="desc_geld">Salaris, schulden en betalingen</span>
         </a>
         <a class="cat-card" onclick="openPage('page-werk')">
             <span class="cat-icon">⚒️</span>
             <span class="cat-label" data-i18n="cat_werk">Werk</span>
+            <span class="cat-desc" data-i18n="desc_werk">Contract, ontslag en rechten</span>
         </a>
         <a class="cat-card" onclick="openPage('page-wonen')">
             <span class="cat-icon">🏠</span>
             <span class="cat-label" data-i18n="cat_wonen">Wonen</span>
+            <span class="cat-desc" data-i18n="desc_wonen">Huur, huisvestingsproblemen</span>
         </a>
         <a class="cat-card" onclick="openPage('page-zorg')">
             <span class="cat-icon">❤️</span>
             <span class="cat-label" data-i18n="cat_zorg">Zorg</span>
+            <span class="cat-desc" data-i18n="desc_zorg">Verzekering en huisarts</span>
         </a>
         <a class="cat-card" onclick="openPage('page-digid')">
             <span class="cat-icon">📄</span>
             <span class="cat-label" data-i18n="cat_digid">DigiD & papieren</span>
+            <span class="cat-desc" data-i18n="desc_digid">BSN, formulieren en brieven</span>
         </a>
         <a class="cat-card" onclick="openPage('page-veilig')">
             <span class="cat-icon">🛡️</span>
             <span class="cat-label" data-i18n="cat_veilig">Veilig hulp zoeken</span>
+            <span class="cat-desc" data-i18n="desc_veilig">Anoniem en vertrouwelijk</span>
         </a>
     </div>
 
     <!-- KEUZEHULP / WIZARD -->
     <div class="wizard-section">
-        <div class="section-title" data-i18n="wizard_section_title">Of: laat ons helpen zoeken</div>
+        <div class="section-title" style="margin-bottom:20px" data-i18n="wizard_section_title">Laat ons helpen zoeken</div>
         <div class="wizard-box">
             <div class="wizard-title" data-i18n="wizard_title">🔍 Keuzehulp</div>
             <div class="wizard-sub" data-i18n="wizard_sub">Beantwoord 3 korte vragen. Wij zoeken de juiste hulp voor jou.</div>
@@ -142,7 +148,7 @@
         <div>
             <h3 data-i18n="contact_title">Praat met iemand</h3>
             <p data-i18n="contact_sub">In jouw taal. Anoniem. Gratis.</p>
-            <a href="https://wa.me/31201234567" data-i18n="open_whatsapp">Open WhatsApp ›</a>
+            <a href="html/contact.html" data-i18n="open_contact">Naar contactpagina ›</a>
         </div>
     </div>
 
@@ -341,8 +347,7 @@
     </div>
 </div>
 
-<!-- JavaScript (staat onderaan zodat HTML eerst laadt) -->
-<script src="java/app.js"></script>
 
+<script src="java/app.js"></script>
 </body>
 </html>
