@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DigiD & papieren — Hulp voor Jou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+    <a href="../index.html" class="logo">Hulp <span>voor Jou</span> · Amsterdam</a>
+    <div style="position:relative">
+        <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
+        <div class="lang-menu" id="langMenu">
+            <button onclick="setLang('nl')" class="active" id="btn-nl">🇳🇱 Nederlands</button>
+            <button onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
+            <button onclick="setLang('pl')" id="btn-pl">🇵🇱 Polski</button>
+            <button onclick="setLang('ro')" id="btn-ro">🇷🇴 Română</button>
+        </div>
+    </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+    <div class="hero-badge">Amsterdam</div>
+    <h1>📄 DigiD & papieren</h1>
+    <p>Nederlandse systemen zijn soms moeilijk. Wij helpen je stap voor stap.</p>
+</div>
+
+<!-- ═══ INHOUD ═══ -->
+<div class="page-content">
+
+    <div class="safe-box">
+        Nederlandse systemen zijn soms moeilijk. Wij helpen je stap voor stap.
+    </div>
+
+    <div class="info-block">
+        <h3>Herken jij dit?</h3>
+        <ul>
+            <li>DigiD werkt niet of je hebt er geen</li>
+            <li>Formulieren zijn moeilijk te begrijpen</li>
+            <li>Brieven van de gemeente niet begrijpen</li>
+            <li>Problemen met BSN-nummer</li>
+        </ul>
+    </div>
+
+    <div class="info-block">
+        <h3>Wat kun je doen?</h3>
+        <ul>
+            <li>Neem je paspoort of ID-kaart mee</li>
+            <li>Vraag hulp in jouw taal</li>
+            <li>Wij leggen alles stap voor stap uit</li>
+        </ul>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="info-block">
+        <h3>📹 Video uitleg</h3>
+        <video width="100%" controls style="margin-top:10px; border-radius:6px;">
+            <source src="../images/digi.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="action-group">
+        <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 WhatsApp hulp</a>
+        <a class="action-btn phone"    href="tel:+31201234567">📞 Bel hulp</a>
+    </div>
+
+    <a href="../index.html" class="back-home-btn">← Terug naar de homepage</a>
+
+</div>
+
+<footer>Gemeente Amsterdam · Gratis hulp voor arbeidsmigranten · 2026</footer>
+
+<script src="../java/contact.js"></script>
+</body>
+</html>
