@@ -323,7 +323,7 @@ function doSearch() {
     if (found) {
         resultBox.style.display = 'block';
         const action = found.page === 'page-digid'
-            ? `window.location.href='html/digi.html'`
+            ? `window.location.href='/html/digi.html'`
             : `openPage('${found.page}')`;
         resultBox.innerHTML = `<span>✅ Gevonden:</span> <button onclick="${action}" style="background:var(--blue);color:#fff;border:none;padding:8px 16px;border-radius:4px;font-family:inherit;font-weight:800;cursor:pointer;margin-left:10px;">${T[lang][found.cat] || found.cat}</button>`;
     } else {
