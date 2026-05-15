@@ -371,7 +371,7 @@ footer {
 .back-btn:hover { background: rgba(255,255,255,.3); }
 .page-header h2 { font-size: 1.1rem; font-weight: 900; }
 
-.page-content { padding: 24px; max-width: 700px; }
+.page-content { padding: 24px; }
 
 .info-block {
     border: 1px solid var(--border);
@@ -416,13 +416,140 @@ footer {
     line-height: 1.6;
 }
 
+/* ─── CONTACT PAGINA GRID ─── */
+.page-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.page-content-grid .full-width {
+    grid-column: 1 / -1;
+}
+
 /* ─── RESPONSIVE ─── */
 @media (min-width: 640px) {
     .grid { grid-template-columns: 1fr 1fr 1fr; }
     .hero h1 { font-size: 2.6rem; }
+    .page-content-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 400px) {
     .grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 1.6rem; }
     .contact-strip { flex-direction: column; }
 }
+
+/* ─── CONTACT.HTML EXTRA ─── */
+.logo { text-decoration: none; }
+
+.back-home-btn {
+    display: block;
+    text-align: center;
+    margin: 24px 0 0;
+    border: 2px solid var(--border);
+    padding: 14px;
+    font-weight: 800;
+    font-size: .95rem;
+    color: var(--blue);
+    text-decoration: none;
+}
+.back-home-btn:hover { border-color: var(--blue); background: var(--bg-light); }
+
+/* ─── ZOEKBALK ─── */
+.search-bar {
+    display: flex;
+    gap: 0;
+    margin: 20px 24px 0;
+    border: 2px solid var(--blue);
+}
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: .95rem;
+    outline: none;
+    color: var(--text);
+}
+.search-bar button {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: .95rem;
+    cursor: pointer;
+}
+.search-bar button:hover { background: var(--blue-d); }
+
+.search-result {
+    margin: 10px 24px 0;
+    padding: 14px 16px;
+    background: var(--bg-light);
+    border-left: 4px solid var(--blue);
+    font-weight: 700;
+    font-size: .95rem;
+}
+
+/* ─── HERO BADGE RODE KRUISJES ─── */
+.hero-badge {
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* ─── INFO BLOCKS NAAST ELKAAR ─── */
+.info-blocks-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+@media (min-width: 600px) {
+    .info-blocks-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.info-blocks-row .info-block {
+    margin-bottom: 0;
+}
+
+/* ─── RODE KRUISJES ─── */
+.hero-badge {
+    color: #fff;
+}
+.hero-badge .kruis {
+    color: var(--red);
+    font-weight: 900;
+    font-size: 1em;
+}
+
+/* ─── PAGE-CONTENT GRID (contact) ─── */
+.page-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.page-content-grid .full-width {
+    grid-column: 1 / -1;
+}
+@media (min-width: 640px) {
+    .page-content-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ─── BACK HOME BTN ─── */
+.back-home-btn {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0;
+    border: 2px solid var(--border);
+    padding: 14px;
+    font-weight: 800;
+    font-size: .95rem;
+    color: var(--blue);
+    text-decoration: none;
+}
+.back-home-btn:hover { border-color: var(--blue); background: var(--bg-light); }
+
+/* ─── LOGO ALS LINK ─── */
+a.logo { text-decoration: none; }

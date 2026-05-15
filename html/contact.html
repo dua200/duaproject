@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact — Hulp voor Jou</title>
+  <title>Contact — MigrantWijzer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
@@ -12,7 +12,7 @@
 
 <!-- ═══ HEADER ═══ -->
 <header>
-  <a href="../index.html" class="logo">Hulp <span>voor Jou</span> · Amsterdam</a>
+  <a href="../index.html" class="logo">MigrantWijzer</a>
   <div style="position:relative">
     <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
     <div class="lang-menu" id="langMenu">
@@ -20,13 +20,15 @@
       <button onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
       <button onclick="setLang('pl')" id="btn-pl">🇵🇱 Polski</button>
       <button onclick="setLang('ro')" id="btn-ro">🇷🇴 Română</button>
+      <button onclick="setLang('tr')" id="btn-tr">🇹🇷 Türkçe</button>
+      <button onclick="setLang('ar')" id="btn-ar">🇸🇦 العربية</button>
     </div>
   </div>
 </header>
 
 <!-- ═══ HERO ═══ -->
 <div class="hero">
-  <div class="hero-badge" data-i18n="badge">Amsterdam</div>
+  <div class="hero-badge"><span class="kruis">✗✗✗</span> Amsterdam</div>
   <h1 data-i18n="hero_title">Contact</h1>
   <p data-i18n="hero_sub">Anoniem. Gratis. In jouw taal.</p>
 </div>
@@ -55,7 +57,7 @@
       <ul>
         <li>📞 Telefoon: +31 20 123 45 67</li>
         <li>💬 WhatsApp: +31 20 123 45 67</li>
-        <li>✉️ E-mail: hulp@amsterdam.nl</li>
+        <li>✉️ E-mail: Hulp@MigrantWijzer.nl</li>
         <li>📍 Amsterdam</li>
       </ul>
     </div>
@@ -76,15 +78,15 @@
         <li>🇬🇧 English</li>
         <li>🇵🇱 Polski</li>
         <li>🇷🇴 Română</li>
-        <li>🇧🇬 Български</li>
-        <li>🇺🇦 Українська</li>
+        <li>🇹🇷 Türkçe</li>
+        <li>🇸🇦 العربية</li>
       </ul>
     </div>
 
     <div class="action-group full-width">
       <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="open_whatsapp_btn">Open WhatsApp</span></a>
       <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_direct">Bel direct</span></a>
-      <a class="action-btn email"    href="mailto:hulp@amsterdam.nl">✉️ <span data-i18n="send_email">Stuur e-mail</span></a>
+      <a class="action-btn email"    href="mailto:Hulp@MigrantWijzer.nl">✉️ <span data-i18n="send_email">Stuur e-mail</span></a>
     </div>
 
   </div>
@@ -93,8 +95,7 @@
 
 </div>
 
-<footer data-i18n="footer">Gemeente Amsterdam · Gratis hulp voor arbeidsmigranten · 2026</footer>
-
-<script src="../java/contact.js"></script>
+<footer data-i18n="footer">MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
+<script src="../java/Contact.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" dir="ltr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Hulp voor Jou — Amsterdam</title>
+    <title>MigrantWijzer — Amsterdam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -12,7 +12,7 @@
 
 <!-- ═══ HEADER ═══ -->
 <header>
-    <div class="logo">Hulp <span>voor Jou</span> · Amsterdam</div>
+    <div class="logo">MigrantWijzer</div>
     <div style="position:relative">
         <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
         <div class="lang-menu" id="langMenu">
@@ -20,6 +20,8 @@
             <button onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
             <button onclick="setLang('pl')" id="btn-pl">🇵🇱 Polski</button>
             <button onclick="setLang('ro')" id="btn-ro">🇷🇴 Română</button>
+            <button onclick="setLang('tr')" id="btn-tr">🇹🇷 Türkçe</button>
+            <button onclick="setLang('ar')" id="btn-ar">🇸🇦 العربية</button>
         </div>
     </div>
 </header>
@@ -29,10 +31,17 @@
 
     <!-- HERO -->
     <div class="hero">
-        <div class="hero-badge" data-i18n="badge">Amsterdam</div>
+        <div class="hero-badge"><span class="kruis">✗✗✗</span> Amsterdam</div>
         <h1 data-i18n="hero_title">Waar heb je hulp bij nodig?</h1>
-        <p data-i18n="hero_sub">Hulp vragen is veilig. Je werkgever ziet dit niet. Het is gratis.</p>
+        <p data-i18n="hero_sub">Hulp vragen is veilig, makkelijk en gratis.</p>
     </div>
+
+    <!-- ZOEKBALK -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Zoek op DigiD, huisarts, huur, ontslag, BSN..." />
+        <button onclick="doSearch()" data-i18n="search_btn">Zoeken</button>
+    </div>
+    <div id="searchResult" class="search-result" style="display:none;"></div>
 
     <!-- TRUST BALK -->
     <div class="trust">
@@ -79,17 +88,14 @@
 
     <!-- KEUZEHULP / WIZARD -->
     <div class="wizard-section">
-        <div class="section-title" style="margin-bottom:20px" data-i18n="wizard_section_title">Laat ons helpen zoeken</div>
+        <div class="section-title" style="margin-bottom:20px" data-i18n="wizard_section_title">Laat ons hulp zoeken voor jou</div>
         <div class="wizard-box">
             <div class="wizard-title" data-i18n="wizard_title">🔍 Keuzehulp</div>
             <div class="wizard-sub" data-i18n="wizard_sub">Beantwoord 3 korte vragen. Wij zoeken de juiste hulp voor jou.</div>
 
-            <!-- Stap 1 -->
             <div id="wizard-step-1">
                 <div class="wizard-progress">
-                    <div class="dot active"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                    <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
                 </div>
                 <div class="wizard-q" data-i18n="q1">Heb je geen salaris of te weinig salaris gekregen?</div>
                 <div class="wizard-btns">
@@ -98,12 +104,9 @@
                 </div>
             </div>
 
-            <!-- Stap 2 -->
             <div id="wizard-step-2" style="display:none">
                 <div class="wizard-progress">
-                    <div class="dot done"></div>
-                    <div class="dot active"></div>
-                    <div class="dot"></div>
+                    <div class="dot done"></div><div class="dot active"></div><div class="dot"></div>
                 </div>
                 <div class="wizard-q" data-i18n="q2">Heb je problemen met je woning of ben je bang je huis kwijt te raken?</div>
                 <div class="wizard-btns">
@@ -112,12 +115,9 @@
                 </div>
             </div>
 
-            <!-- Stap 3 -->
             <div id="wizard-step-3" style="display:none">
                 <div class="wizard-progress">
-                    <div class="dot done"></div>
-                    <div class="dot done"></div>
-                    <div class="dot active"></div>
+                    <div class="dot done"></div><div class="dot done"></div><div class="dot active"></div>
                 </div>
                 <div class="wizard-q" data-i18n="q3">Ben je bang om je werk of woning kwijt te raken als je hulp vraagt?</div>
                 <div class="wizard-btns">
@@ -126,16 +126,11 @@
                 </div>
             </div>
 
-            <!-- Resultaat -->
             <div class="wizard-result" id="wizard-result">
                 <p id="wizard-result-text"></p>
                 <div class="wizard-result-btns">
-                    <a class="action-btn whatsapp" href="https://wa.me/31201234567">
-                        💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span>
-                    </a>
-                    <a class="action-btn phone" href="tel:+31201234567">
-                        📞 <span data-i18n="call_help">Bel hulp</span>
-                    </a>
+                    <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
+                    <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_help">Bel hulp</span></a>
                 </div>
                 <button class="wizard-restart" onclick="wRestart()" data-i18n="restart">↩ Opnieuw beginnen</button>
             </div>
@@ -152,7 +147,7 @@
         </div>
     </div>
 
-    <footer data-i18n="footer">Gemeente Amsterdam · Gratis hulp voor arbeidsmigranten · 2026</footer>
+    <footer data-i18n="footer">MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
 </div>
 
 
@@ -166,24 +161,26 @@
     </div>
     <div class="page-content">
         <div class="safe-box" data-i18n="safe_geld">Hulp vragen kost geen geld. Je werkgever krijgt dit niet te zien.</div>
-        <div class="info-block">
-            <h3 data-i18n="situations">Herken jij dit?</h3>
-            <ul>
-                <li>Salaris komt niet op tijd</li>
-                <li>Je krijgt minder betaald dan afgesproken</li>
-                <li>Geld wordt ingehouden zonder uitleg</li>
-                <li>Uitzendbureau reageert niet</li>
-                <li>Schulden of geldstress</li>
-            </ul>
-        </div>
-        <div class="info-block">
-            <h3 data-i18n="what_todo">Wat kun je doen?</h3>
-            <ul>
-                <li>Bewaar loonstroken en je contract</li>
-                <li>Maak screenshots van berichten</li>
-                <li>Vraag eerst anoniem advies</li>
-                <li>Je hoeft niet meteen officiële stappen te nemen</li>
-            </ul>
+        <div class="info-blocks-row">
+            <div class="info-block">
+                <h3 data-i18n="situations">Herken jij dit?</h3>
+                <ul>
+                    <li>Salaris komt niet op tijd</li>
+                    <li>Je krijgt minder betaald dan afgesproken</li>
+                    <li>Geld wordt ingehouden zonder uitleg</li>
+                    <li>Uitzendbureau reageert niet</li>
+                    <li>Schulden of geldstress</li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h3 data-i18n="what_todo">Wat kun je doen?</h3>
+                <ul>
+                    <li>Bewaar loonstroken en je contract</li>
+                    <li>Maak screenshots van berichten</li>
+                    <li>Vraag eerst anoniem advies</li>
+                    <li>Je hoeft niet meteen officiële stappen te nemen</li>
+                </ul>
+            </div>
         </div>
         <div class="action-group">
             <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
@@ -200,24 +197,26 @@
     </div>
     <div class="page-content">
         <div class="safe-box" data-i18n="safe_werk">Je hoeft niet meteen officiële stappen te nemen. Praat eerst anoniem.</div>
-        <div class="info-block">
-            <h3 data-i18n="situations">Herken jij dit?</h3>
-            <ul>
-                <li>Slechte behandeling door werkgever</li>
-                <li>Geen duidelijk contract</li>
-                <li>Dreiging van ontslag</li>
-                <li>Problemen met werktijden</li>
-                <li>Problemen met uitzendbureau</li>
-            </ul>
-        </div>
-        <div class="info-block">
-            <h3 data-i18n="what_todo">Wat kun je doen?</h3>
-            <ul>
-                <li>Bewaar berichten en e-mails</li>
-                <li>Maak foto's of screenshots</li>
-                <li>Vraag hulp in jouw taal</li>
-                <li>Je kunt anoniem advies vragen</li>
-            </ul>
+        <div class="info-blocks-row">
+            <div class="info-block">
+                <h3 data-i18n="situations">Herken jij dit?</h3>
+                <ul>
+                    <li>Slechte behandeling door werkgever</li>
+                    <li>Geen duidelijk contract</li>
+                    <li>Dreiging van ontslag</li>
+                    <li>Problemen met werktijden</li>
+                    <li>Problemen met uitzendbureau</li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h3 data-i18n="what_todo">Wat kun je doen?</h3>
+                <ul>
+                    <li>Bewaar berichten en e-mails</li>
+                    <li>Maak foto's of screenshots</li>
+                    <li>Vraag hulp in jouw taal</li>
+                    <li>Je kunt anoniem advies vragen</li>
+                </ul>
+            </div>
         </div>
         <div class="action-group">
             <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
@@ -233,23 +232,25 @@
         <h2>🏠 <span data-i18n="cat_wonen">Wonen</span></h2>
     </div>
     <div class="page-content">
-        <div class="safe-box" data-i18n="safe_wonen">Je kunt anoniem praten. Je werkgever krijgt dit niet te horen.</div>
-        <div class="info-block">
-            <h3 data-i18n="situations">Herken jij dit?</h3>
-            <ul>
-                <li>Slechte woonomstandigheden</li>
-                <li>Te veel mensen in huis</li>
-                <li>Hoge huur of huurproblemen</li>
-                <li>Werkgever dreigt met uit huis zetten</li>
-            </ul>
-        </div>
-        <div class="info-block">
-            <h3 data-i18n="what_todo">Wat kun je doen?</h3>
-            <ul>
-                <li>Maak foto's van de woning</li>
-                <li>Bewaar berichten van je verhuurder</li>
-                <li>Zoek snel hulp — wacht niet te lang</li>
-            </ul>
+        <div class="safe-box" data-i18n="safe_wonen">Je kunt anoniem hulp zoeken. Je verhuurder krijgt dit niet te horen.</div>
+        <div class="info-blocks-row">
+            <div class="info-block">
+                <h3 data-i18n="situations">Herken jij dit?</h3>
+                <ul>
+                    <li>Slechte woonomstandigheden</li>
+                    <li>Te veel mensen in huis</li>
+                    <li>Hoge huur of huurproblemen</li>
+                    <li>Werkgever dreigt met uit huis zetten</li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h3 data-i18n="what_todo">Wat kun je doen?</h3>
+                <ul>
+                    <li>Maak foto's van de woning</li>
+                    <li>Bewaar berichten van je verhuurder</li>
+                    <li>Zoek snel hulp — wacht niet te lang</li>
+                </ul>
+            </div>
         </div>
         <div class="action-group">
             <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
@@ -266,22 +267,24 @@
     </div>
     <div class="page-content">
         <div class="safe-box" data-i18n="safe_zorg">Hulp vragen bij zorg is altijd gratis en veilig.</div>
-        <div class="info-block">
-            <h3 data-i18n="situations">Herken jij dit?</h3>
-            <ul>
-                <li>Geen zorgverzekering</li>
-                <li>Brieven van zorgverzekeraar niet begrijpen</li>
-                <li>Geen huisarts gevonden</li>
-                <li>Problemen met zorgkosten</li>
-            </ul>
-        </div>
-        <div class="info-block">
-            <h3 data-i18n="what_todo">Wat kun je doen?</h3>
-            <ul>
-                <li>Neem je documenten mee</li>
-                <li>Vraag uitleg in jouw taal</li>
-                <li>Hulp is beschikbaar — vraag het ons</li>
-            </ul>
+        <div class="info-blocks-row">
+            <div class="info-block">
+                <h3 data-i18n="situations">Herken jij dit?</h3>
+                <ul>
+                    <li>Geen zorgverzekering</li>
+                    <li>Brieven van zorgverzekeraar niet begrijpen</li>
+                    <li>Geen huisarts gevonden</li>
+                    <li>Problemen met zorgkosten</li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h3 data-i18n="what_todo">Wat kun je doen?</h3>
+                <ul>
+                    <li>Neem je documenten mee</li>
+                    <li>Vraag uitleg in jouw taal</li>
+                    <li>Hulp is beschikbaar — vraag het ons</li>
+                </ul>
+            </div>
         </div>
         <div class="action-group">
             <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
@@ -297,16 +300,18 @@
         <h2>🛡️ <span data-i18n="cat_veilig">Veilig hulp zoeken</span></h2>
     </div>
     <div class="page-content">
-        <div class="safe-box" data-i18n="safe_veilig">Veel mensen zijn bang om hulp te vragen. Je staat niet alleen. Het is veilig.</div>
-        <div class="info-block">
-            <h3 data-i18n="veilig_title">Dit is belangrijk om te weten:</h3>
-            <ul>
-                <li>Hulp vragen kost geen geld</li>
-                <li>Je werkgever krijgt dit niet te zien</li>
-                <li>Je mag anoniem vragen stellen</li>
-                <li>Je hoeft niet meteen officiële stappen te nemen</li>
-                <li>We spreken jouw taal</li>
-            </ul>
+        <div class="safe-box" data-i18n="safe_veilig">Veel mensen zijn bang om hulp te vragen. Je staat niet alleen.</div>
+        <div class="info-blocks-row">
+            <div class="info-block">
+                <h3 data-i18n="veilig_title">Dit is belangrijk om te weten:</h3>
+                <ul>
+                    <li>Hulp vragen kost geen geld</li>
+                    <li>Je werkgever krijgt dit niet te zien</li>
+                    <li>Je mag anoniem vragen stellen</li>
+                    <li>Je hoeft niet meteen officiële stappen te nemen</li>
+                    <li>We spreken jouw taal</li>
+                </ul>
+            </div>
         </div>
         <div class="action-group">
             <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_safe">Praat veilig via WhatsApp</span></a>
@@ -314,7 +319,6 @@
         </div>
     </div>
 </div>
-
 
 <script src="java/app.js"></script>
 </body>
