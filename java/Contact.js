@@ -39,6 +39,8 @@ const T = {
         video_title: '📹 Video uitleg',
         whatsapp_chat: 'WhatsApp hulp',
         call_help: 'Bel hulp',
+        btn_legal: '⚖️ Juridische informatie →',
+        btn_help: '🤝 Waar krijg je hulp? →',
     },
     en: {
         badge: 'Amsterdam',
@@ -75,6 +77,8 @@ const T = {
         video_title: '📹 Video explanation',
         whatsapp_chat: 'WhatsApp help',
         call_help: 'Call for help',
+        btn_legal: '⚖️ Legal information →',
+        btn_help: '🤝 Where can you get help? →',
     },
     pl: {
         badge: 'Amsterdam',

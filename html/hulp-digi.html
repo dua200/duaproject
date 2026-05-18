@@ -4,89 +4,254 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>🤝 Waar krijg je hulp? — DigiD</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../java/translations.js"></script>
 </head>
 <body>
 
 <header>
-    <a href="../index.html" class="logo">MigrantWijzer</a>
+
+    <a href="../index.html" class="logo">
+        MigrantWijzer
+    </a>
+
     <div style="position:relative">
-        <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
+
+        <button class="lang-btn" id="langToggle">
+            🌍 <span id="langLabel">NL</span> ▾
+        </button>
+
         <div class="lang-menu" id="langMenu">
-            <button onclick="setLang('nl')" class="active" id="btn-nl">🇳🇱 Nederlands</button>
-            <button onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
-            <button onclick="setLang('pl')" id="btn-pl">🇵🇱 Polski</button>
-            <button onclick="setLang('ro')" id="btn-ro">🇷🇴 Română</button>
-            <button onclick="setLang('tr')" id="btn-tr">🇹🇷 Türkçe</button>
-            <button onclick="setLang('ar')" id="btn-ar">🇸🇦 العربية</button>
+
+            <button onclick="setLang('nl')" class="active" id="btn-nl">
+                🇳🇱 Nederlands
+            </button>
+
+            <button onclick="setLang('en')" id="btn-en">
+                🇬🇧 English
+            </button>
+
+            <button onclick="setLang('pl')" id="btn-pl">
+                🇵🇱 Polski
+            </button>
+
+            <button onclick="setLang('ro')" id="btn-ro">
+                🇷🇴 Română
+            </button>
+
+            <button onclick="setLang('tr')" id="btn-tr">
+                🇹🇷 Türkçe
+            </button>
+
+            <button onclick="setLang('ar')" id="btn-ar">
+                🇸🇦 العربية
+            </button>
+
         </div>
+
     </div>
+
 </header>
 
 <div class="hero">
-    <div class="hero-badge"><span class="kruis">✗✗✗</span> Amsterdam</div>
-    <h1>🤝 Waar krijg je hulp? — DigiD & Papieren</h1>
-    <p>Organisaties die jou kunnen helpen bij DigiD en documenten</p>
+
+    <div class="hero-badge">
+        <span class="kruis">✗✗✗</span> Amsterdam
+    </div>
+
+    <h1 data-i18n="digi_help_title">
+        🤝 Waar krijg je hulp? — DigiD & Papieren
+    </h1>
+
+    <p data-i18n="digi_help_sub">
+        Organisaties die jou kunnen helpen bij DigiD en documenten
+    </p>
+
 </div>
 
 <div class="page-content">
 
-    <div class="safe-box">
+    <div class="safe-box" data-i18n="digi_help_safe">
         Nederlandse systemen kunnen ingewikkeld zijn. Wij helpen jou stap voor stap.
     </div>
 
     <div class="info-block">
-        <h3>🏙️ Gemeente Amsterdam</h3>
+
+        <h3 data-i18n="digi_help_city_title">
+            🏙️ Gemeente Amsterdam
+        </h3>
+
         <ul>
-            <li>Hulp bij registratie, BSN en brieven</li>
-            <li>Sociaal loket en buurtteams</li>
-            <li><strong>Website:</strong> amsterdam.nl</li>
+            <li data-i18n="digi_help_city_1">
+                Hulp bij registratie, BSN en brieven
+            </li>
+
+            <li data-i18n="digi_help_city_2">
+                Sociaal loket en buurtteams
+            </li>
+
+            <li>
+                <strong data-i18n="website_label">
+                    Website:
+                </strong>
+
+                amsterdam.nl
+            </li>
         </ul>
+
     </div>
 
     <div class="info-block">
-        <h3>🪪 DigiD helpdesk</h3>
+
+        <h3 data-i18n="digi_help_digid_title">
+            🪪 DigiD helpdesk
+        </h3>
+
         <ul>
-            <li>Hulp bij aanvragen en inloggen</li>
-            <li>Gratis ondersteuning</li>
-            <li><strong>Website:</strong> digid.nl</li>
-            <li><strong>Telefoon:</strong> 088 123 65 55</li>
+
+            <li data-i18n="digi_help_digid_1">
+                Hulp bij aanvragen en inloggen
+            </li>
+
+            <li data-i18n="digi_help_digid_2">
+                Gratis ondersteuning
+            </li>
+
+            <li>
+                <strong data-i18n="website_label">
+                    Website:
+                </strong>
+
+                digid.nl
+            </li>
+
+            <li>
+                <strong data-i18n="phone_label">
+                    Telefoon:
+                </strong>
+
+                088 123 65 55
+            </li>
+
         </ul>
+
     </div>
 
     <div class="info-block">
-        <h3>⚖️ Het Juridisch Loket</h3>
+
+        <h3 data-i18n="legaldesk_title">
+            ⚖️ Het Juridisch Loket
+        </h3>
+
         <ul>
-            <li>Hulp bij officiële documenten en problemen</li>
-            <li>Gratis en anoniem</li>
-            <li><strong>Website:</strong> juridischloket.nl</li>
+
+            <li data-i18n="digi_help_legal_1">
+                Hulp bij officiële documenten en problemen
+            </li>
+
+            <li data-i18n="free_anonymous">
+                Gratis en anoniem
+            </li>
+
+            <li>
+                <strong data-i18n="website_label">
+                    Website:
+                </strong>
+
+                juridischloket.nl
+            </li>
+
         </ul>
+
     </div>
 
     <div class="info-block">
-        <h3>🛡️ FairWork</h3>
+
+        <h3 data-i18n="fairwork_title">
+            🛡️ FairWork
+        </h3>
+
         <ul>
-            <li>Ondersteuning bij problemen door administratie of werk</li>
-            <li>Speciaal voor arbeidsmigranten</li>
-            <li><strong>Website:</strong> fairwork.nu</li>
+
+            <li data-i18n="digi_help_fairwork_1">
+                Ondersteuning bij problemen door administratie of werk
+            </li>
+
+            <li data-i18n="special_migrants">
+                Speciaal voor arbeidsmigranten
+            </li>
+
+            <li>
+                <strong data-i18n="website_label">
+                    Website:
+                </strong>
+
+                fairwork.nu
+            </li>
+
         </ul>
+
     </div>
 
     <div class="action-group">
-        <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 WhatsApp hulp</a>
-        <a class="action-btn phone"    href="tel:+31201234567">📞 Bel hulp</a>
+
+        <a class="action-btn whatsapp"
+           href="https://wa.me/31201234567">
+
+            💬 <span data-i18n="whatsapp_chat">
+                WhatsApp hulp
+            </span>
+
+        </a>
+
+        <a class="action-btn phone"
+           href="tel:+31201234567">
+
+            📞 <span data-i18n="call_help">
+                Bel hulp
+            </span>
+
+        </a>
+
     </div>
 
     <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap;">
-        <a href="juridisch-digi.html" class="back-home-btn" style="flex:1;">⚖️ Juridische informatie →</a>
-        <a href="digi.html"           class="back-home-btn" style="flex:1;">← Terug naar DigiD pagina</a>
+
+        <a href="juridisch-digi.html"
+           class="back-home-btn"
+           style="flex:1;">
+
+            <span data-i18n="btn_legal">
+                ⚖️ Juridische informatie →
+            </span>
+
+        </a>
+
+        <a href="digi.html"
+           class="back-home-btn"
+           style="flex:1;">
+
+            <span data-i18n="back_digi">
+                ← Terug naar DigiD pagina
+            </span>
+
+        </a>
+
     </div>
 
 </div>
 
-<footer>MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
-<script src="../java/Contact.js"></script>
+<footer data-i18n="footer">
+    MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026
+</footer>
+<script>
+    applyTranslations();
+</script>
 </body>
 </html>
