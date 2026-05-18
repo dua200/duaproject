@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🤝 Waar krijg je hulp? — Zorg</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>⚖️ Juridische informatie — Zorg</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="/java/translations.js"></script>
 </head>
 <body>
-
 <header>
-  <a href="../index.html" class="logo">MigrantWijzer</a>
+  <a href="../index.html" class="logo" data-i18n="logo">MigrantWijzer</a>
   <div style="position:relative">
     <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
     <div class="lang-menu" id="langMenu">
@@ -25,68 +22,47 @@
     </div>
   </div>
 </header>
-
 <div class="hero">
-  <div class="hero-badge"><span class="kruis">✗✗✗</span> Amsterdam</div>
-  <h1>🤝 Waar krijg je hulp? — Zorg</h1>
-  <p>Organisaties die jou kunnen helpen bij zorgproblemen</p>
+  <div class="hero-badge"><span class="kruis">✗✗✗</span> <span data-i18n="badge">Amsterdam</span></div>
+  <h1 data-i18n="zorg_jur_title">⚖️ Juridische informatie — Zorg</h1>
+  <p data-i18n="zorg_jur_sub">Jouw rechten bij zorg en verzekering in Nederland</p>
 </div>
-
 <div class="page-content">
-
-  <div class="safe-box">
-    Hulp zoeken bij zorg is altijd gratis en veilig.
-  </div>
-
+  <div class="safe-box" data-i18n="zorg_jur_safe">Je hebt altijd recht op medische basiszorg in Nederland.</div>
   <div class="info-block">
-    <h3>📞 Zorgverzekeringslijn</h3>
+    <h3 data-i18n="zorg_h1">🏥 Zorgverzekering</h3>
     <ul>
-      <li>Hulp bij zorgverzekering en schulden</li>
-      <li>Gratis bellen voor vragen over je verzekering</li>
-      <li><strong>Telefoon:</strong> 0800 6426</li>
+      <li data-i18n="zorg_l1">In Nederland is een zorgverzekering verplicht voor iedereen die werkt of woont</li>
+      <li data-i18n="zorg_l2">Zonder verzekering kun je hoge kosten krijgen</li>
+      <li data-i18n="zorg_l3">Je kunt soms hulp krijgen bij het afsluiten of betalen van een verzekering</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>⚖️ Het Juridisch Loket</h3>
+    <h3 data-i18n="zorg_h2">🧑‍⚕️ Toegang tot zorg</h3>
     <ul>
-      <li>Juridisch advies over zorg en kosten</li>
-      <li>Gratis en anoniem</li>
-      <li><strong>Website:</strong> juridischloket.nl</li>
+      <li data-i18n="zorg_l4">Je hebt altijd recht op medische basiszorg, ook zonder perfecte administratie</li>
+      <li data-i18n="zorg_l5">Je mag je inschrijven bij een huisarts in jouw woonplaats</li>
+      <li data-i18n="zorg_l6">Een huisarts mag je niet weigeren zonder geldige reden</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>🏙️ Gemeente Amsterdam</h3>
+    <h3 data-i18n="zorg_h3">💶 Zorgkosten</h3>
     <ul>
-      <li>Hulp bij zorgverzekering en betalingsproblemen</li>
-      <li>Sociaal loket en buurtteams</li>
-      <li><strong>Website:</strong> amsterdam.nl</li>
+      <li data-i18n="zorg_l7">Je betaalt soms een eigen risico voor zorg</li>
+      <li data-i18n="zorg_l8">Niet betaalde zorgkosten kunnen worden doorgestuurd naar incasso</li>
+      <li data-i18n="zorg_l9">Je kunt vaak een betalingsregeling aanvragen</li>
     </ul>
   </div>
-
-  <div class="info-block">
-    <h3>🏥 GGD Amsterdam</h3>
-    <ul>
-      <li>Informatie over gezondheid en toegang tot zorg</li>
-      <li>Hulp bij inschrijving bij een huisarts</li>
-      <li><strong>Website:</strong> ggd.amsterdam.nl</li>
-    </ul>
-  </div>
-
   <div class="action-group">
-    <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 WhatsApp hulp</a>
-    <a class="action-btn phone"    href="tel:+31201234567">📞 Bel hulp</a>
+    <a class="action-btn whatsapp" href="https://wa.me/31201234567" data-i18n="whatsapp">💬 WhatsApp hulp</a>
+    <a class="action-btn phone"    href="tel:+31201234567"          data-i18n="bel">📞 Bel hulp</a>
   </div>
-
   <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap;">
-    <a href="juridisch-zorg.html" class="back-home-btn" style="flex:1;">⚖️ Juridische informatie →</a>
-    <a href="../index.html"       class="back-home-btn" style="flex:1;">← Terug naar de homepage</a>
+    <a href="hulp-zorg.html" class="back-home-btn" style="flex:1;" data-i18n="hulp_btn">🤝 Waar krijg je hulp? →</a>
+    <a href="../index.html"  class="back-home-btn" style="flex:1;" data-i18n="back_home">← Terug naar homepage</a>
   </div>
-
 </div>
-
-<footer>MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
-<script src="../java/Contact.js"></script>
+<footer data-i18n="footer">MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
+<script src="../java/translations.js"></script>
 </body>
 </html>

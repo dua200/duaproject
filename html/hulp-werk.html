@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🤝 Waar krijg je hulp? — Werk</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="/java/translations.js"></script>
 </head>
 <body>
-
 <header>
-  <a href="../index.html" class="logo">MigrantWijzer</a>
+  <a href="../index.html" class="logo" data-i18n="logo">MigrantWijzer</a>
   <div style="position:relative">
     <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
     <div class="lang-menu" id="langMenu">
@@ -25,77 +22,63 @@
     </div>
   </div>
 </header>
-
 <div class="hero">
-  <div class="hero-badge"><span class="kruis">✗✗✗</span> Amsterdam</div>
-  <h1>🤝 Waar krijg je hulp? — Werk</h1>
-  <p>Organisaties die jou kunnen helpen bij werkproblemen</p>
+  <div class="hero-badge"><span class="kruis">✗✗✗</span> <span data-i18n="badge">Amsterdam</span></div>
+  <h1 data-i18n="hulp_werk_title">🤝 Waar krijg je hulp? — Werk</h1>
+  <p data-i18n="hulp_werk_sub">Organisaties die jou kunnen helpen bij werkproblemen</p>
 </div>
-
 <div class="page-content">
-
-  <div class="safe-box">
-    Hulp zoeken is gratis en anoniem. Je werkgever krijgt dit niet te zien.
-  </div>
-
+  <div class="safe-box" data-i18n="hulp_werk_safe">Hulp zoeken is gratis en anoniem. Je werkgever krijgt dit niet te zien.</div>
   <div class="info-block">
-    <h3>⚖️ Het Juridisch Loket</h3>
+    <h3 data-i18n="org_jl_h">⚖️ Het Juridisch Loket</h3>
     <ul>
-      <li>Gratis juridisch advies over werk en salaris</li>
-      <li>Je kunt bellen, langsgaan of online vragen stellen</li>
-      <li><strong>Website:</strong> juridischloket.nl</li>
+      <li data-i18n="org_jl_l1">Gratis juridisch advies</li>
+      <li data-i18n="org_jl_l2">Je kunt bellen, langsgaan of online vragen stellen</li>
+      <li data-i18n="org_jl_web">Website: juridischloket.nl</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>🛡️ FairWork</h3>
+    <h3 data-i18n="org_fw_h">🛡️ FairWork</h3>
     <ul>
-      <li>Hulp bij uitbuiting en arbeidsproblemen</li>
-      <li>Speciaal voor arbeidsmigranten</li>
-      <li><strong>Website:</strong> fairwork.nu</li>
+      <li data-i18n="org_fw_l1">Hulp bij uitbuiting en werkproblemen</li>
+      <li data-i18n="org_fw_l2">Speciaal voor arbeidsmigranten</li>
+      <li data-i18n="org_fw_web">Website: fairwork.nu</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>✊ FNV</h3>
+    <h3 data-i18n="org_fnv_h">✊ FNV</h3>
     <ul>
-      <li>Hulp bij loon, contract en arbeidsrechten</li>
-      <li>Vakbond die opkomt voor werknemers</li>
-      <li><strong>Website:</strong> fnv.nl</li>
+      <li data-i18n="org_fnv_l1">Hulp bij loon, contract en ontslag</li>
+      <li data-i18n="org_fnv_l2">Vakbond die opkomt voor werknemers</li>
+      <li data-i18n="org_fnv_web">Website: fnv.nl</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>🏛️ Nederlandse Arbeidsinspectie</h3>
+    <h3 data-i18n="org_arb_h">🏛️ Nederlandse Arbeidsinspectie</h3>
     <ul>
-      <li>Meldpunt voor misstanden op het werk</li>
-      <li>Je kunt anoniem een melding doen</li>
-      <li><strong>Website:</strong> nlarbeidsinspectie.nl</li>
+      <li data-i18n="org_arb_l1">Meldpunt voor misstanden op het werk</li>
+      <li data-i18n="org_arb_l2">Je kunt anoniem een melding doen</li>
+      <li data-i18n="org_arb_web">Website: nlarbeidsinspectie.nl</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>🏙️ Gemeente Amsterdam</h3>
+    <h3 data-i18n="org_gem_h">🏙️ Gemeente Amsterdam</h3>
     <ul>
-      <li>Sociale hulp en ondersteuning</li>
-      <li>Buurtteams en sociaal loket</li>
-      <li><strong>Website:</strong> amsterdam.nl</li>
+      <li data-i18n="org_gem_l1">Sociale hulp en ondersteuning</li>
+      <li data-i18n="org_gem_l2">Buurtteams en sociaal loket</li>
+      <li data-i18n="org_gem_web">Website: amsterdam.nl</li>
     </ul>
   </div>
-
   <div class="action-group">
-    <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 WhatsApp hulp</a>
-    <a class="action-btn phone"    href="tel:+31201234567">📞 Bel hulp</a>
+    <a class="action-btn whatsapp" href="https://wa.me/31201234567" data-i18n="whatsapp">💬 WhatsApp hulp</a>
+    <a class="action-btn phone"    href="tel:+31201234567"          data-i18n="bel">📞 Bel hulp</a>
   </div>
-
   <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap;">
-    <a href="juridisch-werk.html" class="back-home-btn" style="flex:1;">⚖️ Juridische informatie →</a>
-    <a href="../index.html"       class="back-home-btn" style="flex:1;">← Terug naar de homepage</a>
+    <a href="juridisch-werk.html" class="back-home-btn" style="flex:1;" data-i18n="juridisch_btn">⚖️ Juridische informatie →</a>
+    <a href="../index.html"       class="back-home-btn" style="flex:1;" data-i18n="back_home">← Terug naar homepage</a>
   </div>
-
 </div>
-
-<footer>MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
-<script src="../java/Contact.js"></script>
+<footer data-i18n="footer">MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
+<script src="../java/translations.js"></script>
 </body>
 </html>

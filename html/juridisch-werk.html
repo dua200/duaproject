@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>⚖️ Juridische informatie — Werk</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="/java/translations.js"></script>
 </head>
 <body>
-
 <header>
-  <a href="../index.html" class="logo">MigrantWijzer</a>
+  <a href="../index.html" class="logo" data-i18n="logo">MigrantWijzer</a>
   <div style="position:relative">
     <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
     <div class="lang-menu" id="langMenu">
@@ -25,68 +22,55 @@
     </div>
   </div>
 </header>
-
 <div class="hero">
-  <div class="hero-badge"><span class="kruis">✗✗✗</span> Amsterdam</div>
-  <h1>⚖️ Juridische informatie — Werk</h1>
-  <p>Jouw rechten als werknemer in Nederland</p>
+  <div class="hero-badge"><span class="kruis">✗✗✗</span> <span data-i18n="badge">Amsterdam</span></div>
+  <h1 data-i18n="werk_jur_title">⚖️ Juridische informatie — Werk</h1>
+  <p data-i18n="werk_jur_sub">Jouw rechten als werknemer in Nederland</p>
 </div>
-
 <div class="page-content">
-
-  <div class="safe-box">
-    Je hebt in Nederland altijd rechten als werknemer — ook als je via een uitzendbureau werkt of geen perfect contract hebt.
-  </div>
-
+  <div class="safe-box" data-i18n="werk_jur_safe">Je hebt in Nederland altijd rechten als werknemer — ook via een uitzendbureau.</div>
   <div class="info-block">
-    <h3>💰 Loon & betaling</h3>
+    <h3 data-i18n="werk_h1">💰 Loon & betaling</h3>
     <ul>
-      <li>Je hebt recht op minimaal het wettelijk minimumloon</li>
-      <li>Je salaris moet op tijd en volledig worden betaald</li>
-      <li>Een werkgever mag niet zomaar geld inhouden zonder duidelijke afspraak</li>
+      <li data-i18n="werk_l1">Je hebt recht op minimaal het wettelijk minimumloon</li>
+      <li data-i18n="werk_l2">Je salaris moet op tijd en volledig worden betaald</li>
+      <li data-i18n="werk_l3">Een werkgever mag niet zomaar geld inhouden zonder duidelijke afspraak</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>📄 Contract & afspraken</h3>
+    <h3 data-i18n="werk_h2">📄 Contract & afspraken</h3>
     <ul>
-      <li>Ook zonder schriftelijk contract heb je arbeidsrechten</li>
-      <li>Je hebt recht op duidelijke informatie over je werk, uren en loon</li>
-      <li>Een uitzendbureau moet zich aan dezelfde arbeidswetten houden</li>
+      <li data-i18n="werk_l4">Ook zonder schriftelijk contract heb je arbeidsrechten</li>
+      <li data-i18n="werk_l5">Je hebt recht op duidelijke informatie over je werk, uren en loon</li>
+      <li data-i18n="werk_l6">Een uitzendbureau moet zich aan dezelfde arbeidswetten houden</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>⚠️ Werk & bescherming</h3>
+    <h3 data-i18n="werk_h3">⚠️ Werk & bescherming</h3>
     <ul>
-      <li>Je mag niet slecht behandeld of onder druk gezet worden</li>
-      <li>Dreiging met ontslag mag niet zomaar — er moet een geldige reden zijn</li>
-      <li>Je hebt recht op een veilige werkomgeving zonder intimidatie</li>
+      <li data-i18n="werk_l7">Je mag niet slecht behandeld of onder druk gezet worden</li>
+      <li data-i18n="werk_l8">Dreiging met ontslag mag niet zomaar — er moet een geldige reden zijn</li>
+      <li data-i18n="werk_l9">Je hebt recht op een veilige werkomgeving zonder intimidatie</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>🚫 Belangrijke rechten</h3>
+    <h3 data-i18n="werk_h4">🚫 Belangrijke rechten</h3>
     <ul>
-      <li>Je paspoort of ID mag nooit worden ingenomen</li>
-      <li>Je mag altijd hulp vragen zonder gevolgen voor je werk</li>
-      <li>Je hebt recht op bescherming, ook zonder contract</li>
+      <li data-i18n="werk_l10">Je paspoort of ID mag nooit worden ingenomen</li>
+      <li data-i18n="werk_l11">Je mag altijd hulp vragen zonder gevolgen voor je werk</li>
+      <li data-i18n="werk_l12">Je hebt recht op bescherming, ook zonder contract</li>
     </ul>
   </div>
-
   <div class="action-group">
-    <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 WhatsApp hulp</a>
-    <a class="action-btn phone"    href="tel:+31201234567">📞 Bel hulp</a>
+    <a class="action-btn whatsapp" href="https://wa.me/31201234567" data-i18n="whatsapp">💬 WhatsApp hulp</a>
+    <a class="action-btn phone"    href="tel:+31201234567"          data-i18n="bel">📞 Bel hulp</a>
   </div>
-
   <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap;">
-    <a href="hulp-werk.html"   class="back-home-btn" style="flex:1;">🤝 Waar krijg je hulp? →</a>
-    <a href="../index.html"    class="back-home-btn" style="flex:1;">← Terug naar de homepage</a>
+    <a href="hulp-werk.html" class="back-home-btn" style="flex:1;" data-i18n="hulp_btn">🤝 Waar krijg je hulp? →</a>
+    <a href="../index.html"  class="back-home-btn" style="flex:1;" data-i18n="back_home">← Terug naar homepage</a>
   </div>
-
 </div>
-
-<footer>MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
-<script src="../java/Contact.js"></script>
+<footer data-i18n="footer">MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
+<script src="../java/translations.js"></script>
 </body>
 </html>

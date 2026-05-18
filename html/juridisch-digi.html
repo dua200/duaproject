@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>⚖️ Juridische informatie — DigiD</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="/java/translations.js"></script>
 </head>
 <body>
-
 <header>
-  <a href="../index.html" class="logo">MigrantWijzer</a>
+  <a href="../index.html" class="logo" data-i18n="logo">MigrantWijzer</a>
   <div style="position:relative">
     <button class="lang-btn" id="langToggle">🌍 <span id="langLabel">NL</span> ▾</button>
     <div class="lang-menu" id="langMenu">
@@ -25,59 +22,47 @@
     </div>
   </div>
 </header>
-
 <div class="hero">
-  <div class="hero-badge"><span class="kruis">✗✗✗</span> Amsterdam</div>
-  <h1>⚖️ Juridische informatie — DigiD & Papieren</h1>
-  <p>Jouw rechten bij documenten en registratie in Nederland</p>
+  <div class="hero-badge"><span class="kruis">✗✗✗</span> <span data-i18n="badge">Amsterdam</span></div>
+  <h1 data-i18n="digi_jur_title">⚖️ Juridische informatie — DigiD & Papieren</h1>
+  <p data-i18n="digi_jur_sub">Jouw rechten bij documenten en registratie in Nederland</p>
 </div>
-
 <div class="page-content">
-
-  <div class="safe-box">
-    Je hebt recht op hulp bij inschrijving en documenten. Je hoeft dit niet alleen te doen.
-  </div>
-
+  <div class="safe-box" data-i18n="digi_jur_safe">Je hebt recht op hulp bij inschrijving en documenten.</div>
   <div class="info-block">
-    <h3>🪪 DigiD</h3>
+    <h3 data-i18n="digi_h1">🪪 DigiD</h3>
     <ul>
-      <li>DigiD is een persoonlijke inlog voor de overheid</li>
-      <li>Je hebt het nodig voor zorg, belasting, UWV en gemeente</li>
-      <li>Je mag je DigiD nooit met anderen delen</li>
+      <li data-i18n="digi_l1">DigiD is een persoonlijke inlog voor de overheid</li>
+      <li data-i18n="digi_l2">Je hebt het nodig voor zorg, belasting, UWV en gemeente</li>
+      <li data-i18n="digi_l3">Je mag je DigiD nooit met anderen delen</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>🧾 BSN & registratie</h3>
+    <h3 data-i18n="digi_h2">🧾 BSN & registratie</h3>
     <ul>
-      <li>Je BSN is nodig om te werken en zorg te krijgen</li>
-      <li>Zonder correcte registratie kun je problemen krijgen met officiële zaken</li>
-      <li>Je hebt recht op hulp bij inschrijving en documenten</li>
+      <li data-i18n="digi_l4">Je BSN is nodig om te werken en zorg te krijgen</li>
+      <li data-i18n="digi_l5">Zonder correcte registratie kun je problemen krijgen</li>
+      <li data-i18n="digi_l6">Je hebt recht op hulp bij inschrijving en documenten</li>
     </ul>
   </div>
-
   <div class="info-block">
-    <h3>📩 Overheidsbrieven</h3>
+    <h3 data-i18n="digi_h3">📩 Overheidsbrieven</h3>
     <ul>
-      <li>Brieven van de gemeente of overheid zijn belangrijk</li>
-      <li>Je hebt recht op uitleg als je ze niet begrijpt</li>
-      <li>Je mag hulp vragen bij het invullen van formulieren</li>
+      <li data-i18n="digi_l7">Brieven van de gemeente of overheid zijn belangrijk</li>
+      <li data-i18n="digi_l8">Je hebt recht op uitleg als je ze niet begrijpt</li>
+      <li data-i18n="digi_l9">Je mag hulp vragen bij het invullen van formulieren</li>
     </ul>
   </div>
-
   <div class="action-group">
-    <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 WhatsApp hulp</a>
-    <a class="action-btn phone"    href="tel:+31201234567">📞 Bel hulp</a>
+    <a class="action-btn whatsapp" href="https://wa.me/31201234567" data-i18n="whatsapp">💬 WhatsApp hulp</a>
+    <a class="action-btn phone"    href="tel:+31201234567"          data-i18n="bel">📞 Bel hulp</a>
   </div>
-
   <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap;">
-    <a href="hulp-digi.html"  class="back-home-btn" style="flex:1;">🤝 Waar krijg je hulp? →</a>
-    <a href="digi.html"       class="back-home-btn" style="flex:1;">← Terug naar DigiD pagina</a>
+    <a href="hulp-digi.html" class="back-home-btn" style="flex:1;" data-i18n="hulp_btn">🤝 Waar krijg je hulp? →</a>
+    <a href="digi.html"      class="back-home-btn" style="flex:1;" data-i18n="back_home">← Terug naar DigiD</a>
   </div>
-
 </div>
-
-<footer>MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
-<script src="../java/Contact.js"></script>
+<footer data-i18n="footer">MigrantWijzer · Gratis hulp voor arbeidsmigranten · 2026</footer>
+<script src="../java/translations.js"></script>
 </body>
 </html>
