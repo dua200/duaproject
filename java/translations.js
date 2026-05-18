@@ -479,10 +479,11 @@ const TRANSLATIONS = {
 };
 
 // ─── Taalwissel functie (werkt op alle pagina's) ───
-let lang = 'nl';
+let lang = localStorage.getItem('mw_lang') || 'nl';
 
 function setLang(l) {
     lang = l;
+    localStorage.setItem('mw_lang', l);
     const t = TRANSLATIONS[l] || TRANSLATIONS['nl'];
     const label = document.getElementById('langLabel');
     if (label) label.textContent = l.toUpperCase();
@@ -513,4 +514,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const menu = document.getElementById('langMenu');
         if (menu) menu.classList.remove('open');
     });
+
+    // Herstel opgeslagen taal bij laden
+    const saved = localStorage.getItem('mw_lang');
+    if (saved) setLang(saved);
 });

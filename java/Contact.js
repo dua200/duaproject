@@ -230,7 +230,7 @@ const T = {
     }
 };
 
-let lang = 'nl';
+let lang = localStorage.getItem('mw_lang') || 'nl';
 
 function setLang(l) {
     lang = l;
@@ -254,4 +254,10 @@ document.getElementById('langToggle').addEventListener('click', e => {
 });
 document.addEventListener('click', () => {
     document.getElementById('langMenu').classList.remove('open');
+});
+
+// Herstel opgeslagen taal bij laden
+document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('mw_lang');
+    if (saved && saved !== 'nl') setLang(saved);
 });

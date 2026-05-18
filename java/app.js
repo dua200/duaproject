@@ -520,11 +520,12 @@ const SEARCH_INDEX = [
 ];
 
 // ─── Huidige taal ───
-let lang = 'nl';
+let lang = localStorage.getItem('mw_lang') || 'nl';
 
 // ─── Verander taal ───
 function setLang(l) {
     lang = l;
+    localStorage.setItem('mw_lang', l);
     document.getElementById('langLabel').textContent = l.toUpperCase();
     document.getElementById('langMenu').classList.remove('open');
     ['nl','en','pl','ro','tr','ar'].forEach(x => {
@@ -583,6 +584,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (input) {
         input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
     }
+    // Herstel opgeslagen taal
+    const saved = localStorage.getItem('mw_lang');
+    if (saved && saved !== 'nl') setLang(saved);
 });
 
 // ─── Pagina openen / sluiten ───
