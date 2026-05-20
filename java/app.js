@@ -540,6 +540,8 @@ function setLang(l) {
     const sp = document.getElementById('searchInput');
     if (sp && T[l].search_placeholder) sp.placeholder = T[l].search_placeholder;
     document.documentElement.lang = l;
+    // Update overlay taal labels
+    document.querySelectorAll('.overlay-lang-label').forEach(el => el.textContent = l.toUpperCase());
     // RTL voor Arabisch
     document.documentElement.dir = (l === 'ar') ? 'rtl' : 'ltr';
 }
@@ -593,6 +595,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function openPage(id) {
     document.getElementById(id).classList.add('open');
     window.scrollTo(0, 0);
+    // Update taal label in overlay naar huidige taal
+    document.querySelectorAll('.overlay-lang-label').forEach(el => el.textContent = lang.toUpperCase());
 }
 function closePage(id) {
     document.getElementById(id).classList.remove('open');
