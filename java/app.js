@@ -18,10 +18,16 @@ const T = {
         cat_veilig: 'Veilig hulp zoeken', desc_veilig: 'Anoniem en vertrouwelijk',
         wizard_section_title: 'Laat ons hulp zoeken voor jou',
         wizard_title: ' Keuzehulp',
-        wizard_sub: 'Beantwoord 3 korte vragen. Wij zoeken de juiste hulp voor jou.',
-        q1: 'Heb je geen salaris of te weinig salaris gekregen?',
-        q2: 'Heb je problemen met je woning of ben je bang je huis kwijt te raken?',
-        q3: 'Ben je bang om je werk of woning kwijt te raken als je hulp vraagt?',
+        wizard_sub: 'Beantwoord 5 korte vragen. Wij zoeken de juiste hulp voor jou.',
+        q1: 'Heb je moeite met rondkomen of heb je (te) weinig salaris?',
+        q2: 'Heb je problemen op je werk (zoals uren, contract)?',
+        q3: 'Ben je bang om je woning te verliezen?',
+        btn_free_help: 'Krijg gratis hulp',
+        btn_contact_help: 'Neem direct contact op met hulp',
+        label_stable: ' Alles lijkt stabiel',
+        label_advice: ' Je hebt mogelijk hulp nodig',
+        label_risk: ' Je situatie is risicovol',
+        label_urgent: ' Urgente hulp nodig',
         yes: '✅ Ja', no: '❌ Nee',
         whatsapp_chat: 'WhatsApp hulp', call_help: 'Bel hulp',
         restart: '↩ Opnieuw beginnen',
@@ -108,9 +114,15 @@ const T = {
         wizard_section_title: 'Let us find help for you',
         wizard_title: ' Quick guide',
         wizard_sub: 'Answer 3 short questions. We will find the right help for you.',
-        q1: 'Did you not receive your salary or receive too little?',
-        q2: 'Do you have housing problems or are you afraid of losing your home?',
-        q3: 'Are you afraid of losing your job or home if you ask for help?',
+        q1: 'Do you have trouble making ends meet or do you earn too little?',
+        q2: 'Do you have problems at work (such as hours, contract)?',
+        q3: 'Are you afraid of losing your home?',
+        btn_free_help: 'Get free help',
+        btn_contact_help: 'Contact help directly',
+        label_stable: ' Everything seems stable',
+        label_advice: ' You may need help',
+        label_risk: ' Your situation is at risk',
+        label_urgent: ' Urgent help needed',
         yes: '✅ Yes', no: '❌ No',
         whatsapp_chat: 'WhatsApp help', call_help: 'Call for help',
         restart: '↩ Start again',
@@ -191,9 +203,15 @@ const T = {
         wizard_section_title: 'Pozwól nam znaleźć pomoc dla Ciebie',
         wizard_title: ' Przewodnik',
         wizard_sub: 'Odpowiedz na 3 krótkie pytania.',
-        q1: 'Czy nie otrzymałeś wynagrodzenia lub otrzymałeś za mało?',
-        q2: 'Czy masz problemy z mieszkaniem lub boisz się, że stracisz dom?',
-        q3: 'Czy boisz się stracić pracę jeśli poprosisz o pomoc?',
+        q1: 'Czy masz trudności z utrzymaniem się lub zarabiasz za mało?',
+        q2: 'Czy masz problemy w pracy (takie jak godziny, umowa)?',
+        q3: 'Czy boisz się stracić mieszkanie?',
+        btn_free_help: 'Uzyskaj bezpłatną pomoc',
+        btn_contact_help: 'Skontaktuj się bezpośrednio',
+        label_stable: ' Wszystko wydaje się stabilne',
+        label_advice: ' Możliwe, że potrzebujesz pomocy',
+        label_risk: ' Twoja sytuacja jest ryzykowna',
+        label_urgent: ' Potrzebna pilna pomoc',
         yes: '✅ Tak', no: '❌ Nie',
         whatsapp_chat: 'Pomoc przez WhatsApp', call_help: 'Zadzwoń po pomoc',
         restart: '↩ Zacznij od nowa',
@@ -274,9 +292,15 @@ const T = {
         wizard_section_title: 'Lasă-ne să găsim ajutor pentru tine',
         wizard_title: ' Ghid rapid',
         wizard_sub: 'Răspunde la 3 întrebări scurte.',
-        q1: 'Nu ai primit salariul sau ai primit prea puțin?',
-        q2: 'Ai probleme cu locuința sau ți-e teamă că o vei pierde?',
-        q3: 'Ți-e teamă că vei pierde locul de muncă dacă ceri ajutor?',
+        q1: 'Ai dificultăți în a te descurca sau câștigi prea puțin?',
+        q2: 'Ai probleme la locul de muncă (ore, contract)?',
+        q3: 'Ți-e teamă că vei pierde locuința?',
+        btn_free_help: 'Obține ajutor gratuit',
+        btn_contact_help: 'Contactează ajutorul direct',
+        label_stable: ' Totul pare stabil',
+        label_advice: ' Ai posibil nevoie de ajutor',
+        label_risk: ' Situația ta este riscantă',
+        label_urgent: ' Ai nevoie urgentă de ajutor',
         yes: '✅ Da', no: '❌ Nu',
         whatsapp_chat: 'Ajutor pe WhatsApp', call_help: 'Sună pentru ajutor',
         restart: '↩ Începe din nou',
@@ -357,9 +381,15 @@ const T = {
         wizard_section_title: 'Senin için yardım bulalım',
         wizard_title: ' Yardım rehberi',
         wizard_sub: '3 kısa soruyu yanıtla. Sana uygun yardımı bulalım.',
-        q1: 'Maaşını almadın mı veya az mı aldın?',
-        q2: 'Konut sorunun var mı veya evini kaybetmekten mi korkuyorsun?',
-        q3: 'Yardım istersen işini veya evini kaybetmekten mi korkuyorsun?',
+        q1: 'Geçinmekte zorlanıyor musun veya çok az kazanıyor musun?',
+        q2: 'İşte sorunların var mı (saatler, sözleşme gibi)?',
+        q3: 'Evini kaybetmekten korkuyor musun?',
+        btn_free_help: 'Ücretsiz yardım al',
+        btn_contact_help: 'Doğrudan yardıma ulaş',
+        label_stable: ' Her şey stabil görünüyor',
+        label_advice: ' Yardıma ihtiyacın olabilir',
+        label_risk: ' Durumun riskli',
+        label_urgent: ' Acil yardım gerekli',
         yes: '✅ Evet', no: '❌ Hayır',
         whatsapp_chat: 'WhatsApp yardımı', call_help: 'Ara',
         restart: '↩ Yeniden başla',
@@ -440,9 +470,15 @@ const T = {
         wizard_section_title: 'دعنا نجد المساعدة المناسبة لك',
         wizard_title: ' دليل المساعدة',
         wizard_sub: 'أجب على 3 أسئلة قصيرة. سنجد المساعدة المناسبة لك.',
-        q1: 'هل لم تتلق راتبك أو تلقيت أقل مما هو مستحق؟',
-        q2: 'هل لديك مشاكل في السكن أو تخشى فقدان منزلك؟',
-        q3: 'هل تخشى فقدان عملك أو منزلك إذا طلبت المساعدة؟',
+        q1: 'هل تجد صعوبة في تدبير أمورك المالية أو راتبك قليل جداً؟',
+        q2: 'هل لديك مشاكل في العمل (مثل الساعات، العقد)?',
+        q3: 'هل تخشى فقدان منزلك؟',
+        btn_free_help: 'احصل على مساعدة مجانية',
+        btn_contact_help: 'تواصل مع المساعدة مباشرة',
+        label_stable: ' كل شيء يبدو مستقراً',
+        label_advice: ' قد تحتاج إلى مساعدة',
+        label_risk: ' وضعك محفوف بالمخاطر',
+        label_urgent: ' مساعدة عاجلة مطلوبة',
         yes: '✅ نعم', no: '❌ لا',
         whatsapp_chat: 'مساعدة عبر واتساب', call_help: 'اتصل للمساعدة',
         restart: '↩ ابدأ من جديد',
@@ -603,30 +639,64 @@ function closePage(id) {
 }
 
 // ─── Wizard ───
-let answers = {};
+let wAnswers = [false, false, false, false, false];
 
-function wStep(step, answer) {
-    answers['step' + (step - 1)] = answer;
-    document.getElementById('wizard-step-' + (step - 1)).style.display = 'none';
-    if (step <= 3) document.getElementById('wizard-step-' + step).style.display = 'block';
+function wStep(nextStep, questionIndex, answer) {
+    wAnswers[questionIndex - 1] = answer;
+    document.getElementById('wizard-step-' + (nextStep - 1)).style.display = 'none';
+    document.getElementById('wizard-step-' + nextStep).style.display = 'block';
 }
 
-function wResult(answer) {
-    answers['step3'] = answer;
-    document.getElementById('wizard-step-3').style.display = 'none';
-    const res = document.getElementById('wizard-result');
-    const txt = document.getElementById('wizard-result-text');
-    res.classList.add('show');
+function wFinish(questionIndex, answer) {
+    wAnswers[questionIndex - 1] = answer;
+    document.getElementById('wizard-step-5').style.display = 'none';
     const t = T[lang];
-    if (answers.step1 === 'salary' && answer === 'afraid') txt.textContent = t.res_salary_afraid;
-    else if (answers.step2 === 'housing' && answer === 'afraid') txt.textContent = t.res_housing_afraid;
-    else txt.textContent = t.res_general;
+    const txt = document.getElementById('wizard-result-text');
+    const lbl = document.getElementById('wizard-result-label');
+    const res = document.getElementById('wizard-result');
+    const yesCount = wAnswers.filter(Boolean).length;
+    const q1 = wAnswers[0]; const q2 = wAnswers[1];
+    const q3 = wAnswers[2]; const q4 = wAnswers[3]; const q5 = wAnswers[4];
+
+    // Hide all button groups first
+    ['stable','advice','risk'].forEach(k =>
+        document.getElementById('wizard-result-btns-' + k).style.display = 'none');
+
+    let resultText = '';
+    let labelText = '';
+    let labelColor = '';
+    let btnGroup = 'stable';
+
+    if (yesCount === 5 || (q3 && q5 && yesCount >= 4)) {
+        // URGENT
+        labelText = t.label_urgent; labelColor = '#c0392b'; btnGroup = 'risk';
+        resultText = t.res_urgent;
+    } else if (yesCount >= 4 || (q3 && q4)) {
+        // RISICOVOL
+        labelText = t.label_risk; labelColor = '#e67e22'; btnGroup = 'risk';
+        resultText = t.res_risk;
+    } else if (yesCount >= 2 || q3 || q4) {
+        // ADVIES NODIG
+        labelText = t.label_advice; labelColor = '#f39c12'; btnGroup = 'advice';
+        if (q1 && q2) resultText = t.res_advice + ' Focus: werk en salaris.';
+        else if (q3 && q5) resultText = t.res_advice + ' Focus: woonproblemen.';
+        else resultText = t.res_advice;
+    } else {
+        // STABIEL
+        labelText = t.label_stable; labelColor = '#27ae60'; btnGroup = 'stable';
+        resultText = t.res_stable;
+    }
+
+    lbl.textContent = labelText;
+    lbl.style.color = labelColor;
+    txt.textContent = resultText;
+    document.getElementById('wizard-result-btns-' + btnGroup).style.display = 'flex';
+    res.classList.add('show');
 }
 
 function wRestart() {
-    answers = {};
+    wAnswers = [false, false, false, false, false];
     document.getElementById('wizard-result').classList.remove('show');
-    document.getElementById('wizard-step-2').style.display = 'none';
-    document.getElementById('wizard-step-3').style.display = 'none';
+    for (let i = 2; i <= 5; i++) document.getElementById('wizard-step-' + i).style.display = 'none';
     document.getElementById('wizard-step-1').style.display = 'block';
 }

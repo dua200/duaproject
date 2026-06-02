@@ -90,47 +90,76 @@
     <div class="wizard-section">
         <div class="section-title" style="margin-bottom:20px" data-i18n="wizard_section_title">Laat ons hulp zoeken voor jou</div>
         <div class="wizard-box">
-            <div class="wizard-title" data-i18n="wizard_title"> Keuzehulp</div>
-            <div class="wizard-sub" data-i18n="wizard_sub">Beantwoord 3 korte vragen. Wij zoeken de juiste hulp voor jou.</div>
+            <div class="wizard-title" data-i18n="wizard_title">🔍 Keuzehulp</div>
+            <div class="wizard-sub" data-i18n="wizard_sub">Beantwoord 5 korte vragen. Wij zoeken de juiste hulp voor jou.</div>
 
             <div id="wizard-step-1">
                 <div class="wizard-progress">
-                    <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                    <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
                 </div>
-                <div class="wizard-q" data-i18n="q1">Heb je geen salaris of te weinig salaris gekregen?</div>
+                <div class="wizard-q" data-i18n="q1">Heb je moeite met rondkomen of heb je (te) weinig salaris?</div>
                 <div class="wizard-btns">
-                    <button class="btn-yes" onclick="wStep(2,'salary')"    data-i18n="yes">✅ Ja</button>
-                    <button class="btn-no"  onclick="wStep(2,'no_salary')" data-i18n="no">❌ Nee</button>
+                    <button class="btn-yes" onclick="wStep(2,1,true)"  data-i18n="yes">✅ Ja</button>
+                    <button class="btn-no"  onclick="wStep(2,1,false)" data-i18n="no">❌ Nee</button>
                 </div>
             </div>
 
             <div id="wizard-step-2" style="display:none">
                 <div class="wizard-progress">
-                    <div class="dot done"></div><div class="dot active"></div><div class="dot"></div>
+                    <div class="dot done"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
                 </div>
-                <div class="wizard-q" data-i18n="q2">Heb je problemen met je woning of ben je bang je huis kwijt te raken?</div>
+                <div class="wizard-q" data-i18n="q2">Heb je problemen op je werk (zoals uren, contract)?</div>
                 <div class="wizard-btns">
-                    <button class="btn-yes" onclick="wStep(3,'housing')"    data-i18n="yes">✅ Ja</button>
-                    <button class="btn-no"  onclick="wStep(3,'no_housing')" data-i18n="no">❌ Nee</button>
+                    <button class="btn-yes" onclick="wStep(3,2,true)"  data-i18n="yes">✅ Ja</button>
+                    <button class="btn-no"  onclick="wStep(3,2,false)" data-i18n="no">❌ Nee</button>
                 </div>
             </div>
 
             <div id="wizard-step-3" style="display:none">
                 <div class="wizard-progress">
-                    <div class="dot done"></div><div class="dot done"></div><div class="dot active"></div>
+                    <div class="dot done"></div><div class="dot done"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
                 </div>
-                <div class="wizard-q" data-i18n="q3">Ben je bang om je werk of woning kwijt te raken als je hulp vraagt?</div>
+                <div class="wizard-q" data-i18n="q3">Ben je bang om je woning te verliezen?</div>
                 <div class="wizard-btns">
-                    <button class="btn-yes" onclick="wResult('afraid')"    data-i18n="yes">✅ Ja</button>
-                    <button class="btn-no"  onclick="wResult('notafraid')" data-i18n="no">❌ Nee</button>
+                    <button class="btn-yes" onclick="wStep(4,3,true)"  data-i18n="yes">✅ Ja</button>
+                    <button class="btn-no"  onclick="wStep(4,3,false)" data-i18n="no">❌ Nee</button>
+                </div>
+            </div>
+
+            <div id="wizard-step-4" style="display:none">
+                <div class="wizard-progress">
+                    <div class="dot done"></div><div class="dot done"></div><div class="dot done"></div><div class="dot active"></div><div class="dot"></div>
+                </div>
+                <div class="wizard-q" data-i18n="q4">Ben je bang om je werk te verliezen als je hulp vraagt?</div>
+                <div class="wizard-btns">
+                    <button class="btn-yes" onclick="wStep(5,4,true)"  data-i18n="yes">✅ Ja</button>
+                    <button class="btn-no"  onclick="wStep(5,4,false)" data-i18n="no">❌ Nee</button>
+                </div>
+            </div>
+
+            <div id="wizard-step-5" style="display:none">
+                <div class="wizard-progress">
+                    <div class="dot done"></div><div class="dot done"></div><div class="dot done"></div><div class="dot done"></div><div class="dot active"></div>
+                </div>
+                <div class="wizard-q" data-i18n="q5">Heb je problemen met je woonruimte (huur, regels, onderhoud)?</div>
+                <div class="wizard-btns">
+                    <button class="btn-yes" onclick="wFinish(5,true)"  data-i18n="yes">✅ Ja</button>
+                    <button class="btn-no"  onclick="wFinish(5,false)" data-i18n="no">❌ Nee</button>
                 </div>
             </div>
 
             <div class="wizard-result" id="wizard-result">
-                <p id="wizard-result-text"></p>
-                <div class="wizard-result-btns">
-                    <a class="action-btn whatsapp" href="https://wa.me/31201234567"> <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
-                    <a class="action-btn phone"    href="tel:+31201234567"> <span data-i18n="call_help">Bel hulp</span></a>
+                <div id="wizard-result-label" style="font-weight:800; font-size:1.1rem; margin-bottom:8px;"></div>
+                <p id="wizard-result-text" style="margin-bottom:16px;"></p>
+                <div id="wizard-result-btns-stable" style="display:none;" class="wizard-result-btns">
+                    <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
+                    <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_help">Bel hulp</span></a>
+                </div>
+                <div id="wizard-result-btns-advice" style="display:none;" class="wizard-result-btns">
+                    <a class="action-btn whatsapp" href="https://wa.me/31201234567" id="btn-free-help" data-i18n="btn_free_help">Krijg gratis hulp</a>
+                </div>
+                <div id="wizard-result-btns-risk" style="display:none;" class="wizard-result-btns">
+                    <a class="action-btn whatsapp" href="https://wa.me/31201234567" id="btn-contact-help" data-i18n="btn_contact_help">Neem direct contact op</a>
                 </div>
                 <button class="wizard-restart" onclick="wRestart()" data-i18n="restart">↩ Opnieuw beginnen</button>
             </div>
@@ -200,8 +229,8 @@
             <a href="html/hulp-geld.html"      class="back-home-btn" data-i18n="hulp_btn">🤝 Waar krijg je hulp? →</a>
         </div>
         <div class="action-group" style="margin-top:12px;">
-            <a class="action-btn whatsapp" href="https://wa.me/31201234567"> <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
-            <a class="action-btn phone"    href="tel:+31201234567"> <span data-i18n="call_help">Bel hulp</span></a>
+            <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
+            <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_help">Bel hulp</span></a>
         </div>
     </div>
 </div>
@@ -254,7 +283,7 @@
         </div>
         <div class="action-group" style="margin-top:12px;">
             <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
-            <a class="action-btn phone"    href="tel:+31201234567"> <span data-i18n="call_help">Bel hulp</span></a>
+            <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_help">Bel hulp</span></a>
         </div>
     </div>
 </div>
@@ -305,7 +334,7 @@
         </div>
         <div class="action-group" style="margin-top:12px;">
             <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
-            <a class="action-btn phone"    href="tel:+31201234567"> <span data-i18n="call_help">Bel hulp</span></a>
+            <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_help">Bel hulp</span></a>
         </div>
     </div>
 </div>
@@ -348,15 +377,19 @@
                     <li data-i18n="zorg_d2">Vraag uitleg in jouw taal</li>
                     <li data-i18n="zorg_d3">Hulp is beschikbaar — vraag het ons</li>
                 </ul>
+
             </div>
+            <video width="80%" controls style="margin-top:10px; border-radius:6px;">
+                <source src="../images/zorg.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="info-blocks-row" style="margin-top:16px;">
             <a href="html/juridisch-zorg.html" class="back-home-btn" data-i18n="juridisch_btn">⚖️ Juridische informatie →</a>
             <a href="html/hulp-zorg.html"      class="back-home-btn" data-i18n="hulp_btn">🤝 Waar krijg je hulp? →</a>
         </div>
         <div class="action-group" style="margin-top:12px;">
-            <a class="action-btn whatsapp" href="https://wa.me/31201234567"> <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
-            <a class="action-btn phone"    href="tel:+31201234567"> <span data-i18n="call_help">Bel hulp</span></a>
+            <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_chat">WhatsApp hulp</span></a>
+            <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_help">Bel hulp</span></a>
         </div>
     </div>
 </div>
@@ -395,8 +428,8 @@
             </div>
         </div>
         <div class="action-group">
-            <a class="action-btn whatsapp" href="https://wa.me/31201234567"> <span data-i18n="whatsapp_safe">Praat veilig via WhatsApp</span></a>
-            <a class="action-btn phone"    href="tel:+31201234567"><span data-i18n="call_anon">Bel anoniem</span></a>
+            <a class="action-btn whatsapp" href="https://wa.me/31201234567">💬 <span data-i18n="whatsapp_safe">Praat veilig via WhatsApp</span></a>
+            <a class="action-btn phone"    href="tel:+31201234567">📞 <span data-i18n="call_anon">Bel anoniem</span></a>
         </div>
     </div>
 </div>
